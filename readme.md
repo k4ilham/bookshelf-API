@@ -1,6 +1,4 @@
-# Laravel Pembayaran Listrik UKK
-
-Submission Bookshelf API
+# Submission Bookshelf API
 
 ## Update:
 ```bash 
