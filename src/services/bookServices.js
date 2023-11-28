@@ -11,7 +11,7 @@ const addBookServices = (request, h) => {
   if (name === undefined) {
     const response = h.response({
       status: 'fail',
-      message: 'Failed to add book. Please fill in the book name',
+      message: 'Gagal menambahkan buku. Mohon isi nama buku',
     });
     response.code(400);
     return response;
@@ -20,7 +20,7 @@ const addBookServices = (request, h) => {
   if (pageCount < readPage) {
     const response = h.response({
       status: 'fail',
-      message: 'Failed to add book. readPage cannot be greater than pageCount',
+      message: 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount',
     });
     response.code(400);
     return response;
@@ -58,7 +58,7 @@ const addBookServices = (request, h) => {
   if (isSuccess) {
     const response = h.response({
       status: 'success',
-      message: 'Book successfully added',
+      message: 'Buku berhasil ditambahkan',
       data: {
         bookId: id,
       },
@@ -69,7 +69,7 @@ const addBookServices = (request, h) => {
 
   const response = h.response({
     status: 'fail',
-    message: 'Failed to add book',
+    message: 'Gagal menambah buku',
   });
   response.code(500);
   return response;
@@ -128,7 +128,7 @@ const getBookByIdServices = (request, h) => {
 
   const response = h.response({
     status: 'fail',
-    message: 'Book not found',
+    message: 'Buku tidak ditemukan',
   });
   response.code(404);
   return response;
@@ -149,7 +149,7 @@ const editBookByIdServices = (request, h) => {
     if (name === undefined) {
       const response = h.response({
         status: 'fail',
-        message: 'Failed to update book. Please fill in the book name',
+        message: 'Gagal memperbarui buku. Mohon isi nama buku',
       });
       response.code(400);
       return response;
@@ -158,7 +158,7 @@ const editBookByIdServices = (request, h) => {
     if (pageCount < readPage) {
       const response = h.response({
         status: 'fail',
-        message: 'Failed to update book. readPage cannot be greater than pageCount',
+        message: 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount',
       });
       response.code(400);
       return response;
@@ -183,7 +183,7 @@ const editBookByIdServices = (request, h) => {
     // Creating and returning the response based on the operation result
     const response = h.response({
       status: 'success',
-      message: 'Book successfully updated',
+      message: 'Buku berhasil diperbarui',
     });
     response.code(200);
     return response;
@@ -191,7 +191,7 @@ const editBookByIdServices = (request, h) => {
 
   const response = h.response({
     status: 'fail',
-    message: 'Failed to update book. ID not found',
+    message: 'Gagal memperbarui buku. Id tidak ditemukan',
   });
   response.code(404);
   return response;
@@ -211,7 +211,7 @@ const deleteBookByIdServices = (request, h) => {
     // Creating and returning the response based on the operation result
     const response = h.response({
       status: 'success',
-      message: 'Book successfully deleted',
+      message: 'Buku berhasil dihapus',
     });
     response.code(200);
     return response;
@@ -219,7 +219,7 @@ const deleteBookByIdServices = (request, h) => {
 
   const response = h.response({
     status: 'fail',
-    message: 'Book failed to delete. ID not found',
+    message: 'Buku gagal dihapus. Id tidak ditemukan',
   });
   response.code(404);
   return response;
